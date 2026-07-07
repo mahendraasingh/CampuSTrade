@@ -1,0 +1,17 @@
+﻿
+
+Something went wrong. Please check the error below for more details.
+If the problem persists, please open an issue on GitHub.
+
+Error:
+You are not authorized to access the item at https://21st.dev/r/shailendrakumar19999/map. If this is a remote registry, you may need to authenticate.
+
+Message:
+[Authentication required] undefined
+
+Suggestion:
+Check your authentication credentials and environment variables.
+
+You can also try a previous version to see if that works:
+npx shadcn@4.11.0 add https://21st.dev/r/shailendrakumar19999/map -y
+
