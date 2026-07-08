@@ -30,7 +30,7 @@ const EditItem = () => {
   useEffect(() => {
     const fetchItem = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/api/items/${id}`, {
+        const { data } = await axios.get(`https://campustrade-re09.onrender.com/api/items/${id}`, {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         setFormData({
@@ -93,7 +93,7 @@ const EditItem = () => {
         data.append('image', imageFile);
       }
 
-      await axios.put(`http://localhost:5000/api/items/${id}`, data, {
+      await axios.put(`https://campustrade-re09.onrender.com/api/items/${id}`, data, {
         headers: { 
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${user.token}` 
@@ -101,7 +101,7 @@ const EditItem = () => {
       });
       
       // Also update status if changed
-      await axios.put(`http://localhost:5000/api/items/${id}/status`, { status: formData.status }, {
+      await axios.put(`https://campustrade-re09.onrender.com/api/items/${id}/status`, { status: formData.status }, {
         headers: { Authorization: `Bearer ${user.token}` }
       });
 

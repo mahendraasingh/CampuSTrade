@@ -15,7 +15,7 @@ const Feed = () => {
   const fetchItems = async () => {
     try {
       setLoading(true);
-      let query = 'http://localhost:5000/api/items?';
+      let query = 'https://campustrade-re09.onrender.com/api/items?';
       if (search) query += `search=${search}&`;
       if (category) query += `category=${category}&`;
       

@@ -15,7 +15,7 @@ const Chat = () => {
 
   const fetchMessages = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/api/messages/${peerId}/${itemId}`, {
+      const { data } = await axios.get(`https://campustrade-re09.onrender.com/api/messages/${peerId}/${itemId}`, {
         headers: { Authorization: `Bearer ${user.token}` }
       });
       setMessages(data);
@@ -26,7 +26,7 @@ const Chat = () => {
 
   const fetchItem = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/api/items/${itemId}`, {
+      const { data } = await axios.get(`https://campustrade-re09.onrender.com/api/items/${itemId}`, {
         headers: { Authorization: `Bearer ${user.token}` }
       });
       setItem(data);
@@ -52,7 +52,7 @@ const Chat = () => {
     e.preventDefault();
     if (!text.trim()) return;
     try {
-      const { data } = await axios.post(`http://localhost:5000/api/messages`, {
+      const { data } = await axios.post(`https://campustrade-re09.onrender.com/api/messages`, {
         receiverId: peerId,
         itemId,
         text

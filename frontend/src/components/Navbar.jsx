@@ -15,7 +15,7 @@ const Navbar = () => {
     if (user) {
       const fetchUnreadCount = async () => {
         try {
-          const res = await axios.get('http://localhost:5000/api/messages/unread-count', {
+          const res = await axios.get('https://campustrade-re09.onrender.com/api/messages/unread-count', {
             headers: { Authorization: `Bearer ${user.token}` }
           });
           setUnreadCount(res.data.count);

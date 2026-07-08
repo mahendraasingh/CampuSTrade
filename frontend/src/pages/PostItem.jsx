@@ -38,7 +38,7 @@ const PostItem = () => {
       Object.keys(formData).forEach(key => data.append(key, formData[key]));
       if (image) data.append('image', image);
 
-      await axios.post('http://localhost:5000/api/items', data, {
+      await axios.post('https://campustrade-re09.onrender.com/api/items', data, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       toast.success('Item posted! You can edit it from your profile.');

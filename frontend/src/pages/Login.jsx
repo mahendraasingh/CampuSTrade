@@ -17,7 +17,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:5000/api/auth/login', formData);
+      const { data } = await axios.post('https://campustrade-re09.onrender.com/api/auth/login', formData);
       toast.success('Welcome back!');
       login(data, data.token);
       navigate('/feed');

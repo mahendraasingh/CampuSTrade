@@ -33,7 +33,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:5000/api/auth/register', formData);
+      const { data } = await axios.post('https://campustrade-re09.onrender.com/api/auth/register', formData);
       toast.success('Registration successful! Welcome to CampusTrade.');
       login(data, data.token);
       navigate('/feed');

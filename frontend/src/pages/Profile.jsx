@@ -13,7 +13,7 @@ const Profile = () => {
 
   const fetchMyItems = async () => {
     try {
-      const { data } = await axios.get('http://localhost:5000/api/items/user/me', {
+      const { data } = await axios.get('https://campustrade-re09.onrender.com/api/items/user/me', {
         headers: { Authorization: `Bearer ${user.token}` }
       });
       setItems(data);
@@ -33,7 +33,7 @@ const Profile = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this item?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/items/${id}`, {
+        await axios.delete(`https://campustrade-re09.onrender.com/api/items/${id}`, {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         setItems(items.filter(item => item._id !== id));

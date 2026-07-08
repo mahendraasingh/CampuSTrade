@@ -12,7 +12,7 @@ const Inbox = () => {
   useEffect(() => {
     const fetchInbox = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/api/messages/inbox', {
+        const { data } = await axios.get('https://campustrade-re09.onrender.com/api/messages/inbox', {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         setConversations(data);
@@ -25,7 +25,7 @@ const Inbox = () => {
     
     const markAsRead = async () => {
       try {
-        await axios.put('http://localhost:5000/api/messages/mark-read', {}, {
+        await axios.put('https://campustrade-re09.onrender.com/api/messages/mark-read', {}, {
           headers: { Authorization: `Bearer ${user.token}` }
         });
       } catch (error) {
